@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BlogController {
-  /*  @GetMapping("/towPage") // указывыем какой URL
-                              // отслеживаем
-
-   public  String towPageMain(Model model){
-     return  "tow-Page";  // возвраащаем шаблон
-    }*/
+    @GetMapping("/towPage")  // прописываем имя бина
+    public String towPage(Model model) { //если ("/") то при вызове метода
+        // открывается главная страница
+        // и вызывается метод  home
+        model.addAttribute("title", "Главная страница");
+        return "tow-Page";             // возвращаем html  шаблон  home - но лучше создать xml шаблон второйэ
+        // страницы
+    }
 }

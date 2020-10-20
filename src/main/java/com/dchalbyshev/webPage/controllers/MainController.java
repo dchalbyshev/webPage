@@ -18,19 +18,11 @@ public class MainController {
         return "home";             // возвращаем html  шаблон  home
     }
 
-    @GetMapping("/towPage")  // прописываем имя бина
-    public String towPage(Model model) { //если ("/") то при вызове метода
-        // открывается главная страница
-        // и вызывается метод  home
-        model.addAttribute("title", "Главная страница");
-        return "home";             // возвращаем html  шаблон  home - но лучше создать xml шаблон второйэ
-                                  // страницы
-    }
+
 
     @GetMapping("/about")  // прописываем имя бина
     public String about(Model model) { //если ("/") то при вызове метода
-        // открывается главная страница
-        // и вызывается метод  home
+
         model.addAttribute("title", "Страница про нас");
         return "about";             // возвращаем html  шаблон  home - но лучше создать xml шаблон второйэ
         // страницы
