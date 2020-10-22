@@ -11,8 +11,20 @@ public class Post {
     @GeneratedValue (strategy = GenerationType.AUTO)   // позволяет генерировать автоматичекси
     private Long id;         //новое значение
 
+    public Post(String title, String anons, String fullText) {
+        this.id = id;
+        this.title = title;
+        this.anons = anons;
+        this.fullText = fullText;
+    }
+
+    public Post() {
+    }
+
     private  String title,anons,fullText;
     private int views;
+
+
 
     public Long getId() {
         return id;
